@@ -1,0 +1,53 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.team {
+
+  padding-top: 60px;
+
+  &__container {
+    display: flex;
+    background: $color-gray-bg;
+    border-radius: 12px;
+    animation-name: slider;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    width: 300%;
+  }
+
+  @keyframes slider {
+    0% {
+      margin-left: 0;
+    }
+
+    25% {
+      margin-left: 0;
+    }
+
+    33.34% {
+      margin-left: -100%;
+    }
+
+    58.34% {
+      margin-left: -100%;
+    }
+
+    66.66% {
+      margin-left: -200%;
+
+    }
+
+    91.66% {
+      margin-left: -200%;
+    }
+
+    100% {
+      margin-left: 0;
+    }
+  }
+
+  &__viewport {
+    @extend %container;
+    overflow: hidden;
+  }
+}

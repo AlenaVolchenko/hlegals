@@ -1,0 +1,39 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.company-item {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "icn" "ttl" "dsc" "ptc";
+
+  &__title {
+    grid-area: ttl;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 5px;
+  }
+
+  &__description {
+    grid-area: dsc;
+  }
+
+  &___picture {
+    grid-area: ptc;
+    margin-bottom: 5px;
+  }
+
+  &__icon {
+    grid-area: icn;
+  }
+
+  &__icon img {
+    width: 100%;
+  }
+
+  &__subscription {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

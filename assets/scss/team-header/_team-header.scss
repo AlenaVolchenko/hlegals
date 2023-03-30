@@ -1,0 +1,77 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.team-header {
+  margin-top: 50px;
+
+
+  &__grid {
+    // position: absolute;
+    z-index: 2;
+    right: 0;
+    left: 0;
+
+    display: grid;
+    align-items: center;
+
+    @extend %container;
+
+    @include lg-min {
+      top: 50px;
+
+      gap: $gap-sm $gap;
+      grid-template-areas: "logo actions" "logo menu";
+    }
+
+    @include lg {
+      grid-template-areas: "actions" "menu" "logo";
+    }
+
+    // @include md {
+    //   grid-template-areas: "actions menu" "logo logo";
+    // }
+
+    @include md {
+      top: $gap;
+      gap: $gap;
+      grid-template-areas: "actions actions" "logo menu";
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+    display: flex;
+    align-items: start;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 45px;
+
+    @include lg {
+      justify-content: center;
+      margin-top: 5px;
+    }
+
+    @include md {
+      justify-content: unset;
+    }
+
+    a {
+      color: $color-primary;
+    }
+  }
+
+  &__menu {
+    grid-area: menu;
+  }
+
+  &__actions {
+    grid-area: actions;
+  }
+
+  &-image {
+    height: 86vh;
+
+    transform: translate(5px, 35%);
+  }
+
+}

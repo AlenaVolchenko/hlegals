@@ -1,0 +1,79 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.logo {
+
+  &__container {
+    @extend %container-xl;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @include lg {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include md {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+
+  &__color-hillel {
+    background-color: $color-blue;
+  }
+
+  &__color-wanna {
+    background-color: $color-gray-blue;
+  }
+
+  &__color-tapgerine {
+    background-color: $color-orange;
+  }
+
+  &__color-look {
+    background-color: $color-violet;
+  }
+
+  &__color-orangear {
+    background-color: $color-orange-light;
+  }
+
+  &__color-adtell {
+    background-color: $color-gray-light;
+  }
+
+  &__color-clickkly {
+    background-color: $color-red;
+  }
+
+  &__color-ecolease {
+    background-color: $color-blue-light;
+  }
+
+  &__color-infra {
+    background-color: $color-gray-inf;
+  }
+
+  &__color-city {
+    background-color: $color-violet-dark;
+  }
+
+  &__color-art {
+    background-color: $color-gray-bg-alt;
+  }
+
+  &__color-ultcard {
+    background-color: $color-black;
+  }
+}

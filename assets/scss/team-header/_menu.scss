@@ -1,0 +1,36 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.team-menu span {
+  background-color: $color-black;
+}
+
+.team-menu ol {
+  top: unset;
+
+  @include lg {
+    justify-content: center;
+  }
+}
+
+.team-menu a {
+  color: $color-active;
+}
+
+.menu {
+  &__active {
+    border-bottom: 2px solid $color-accent;
+    overflow: visible;
+    width: 66px;
+    display: flex;
+    justify-content: center;
+
+    @include md {
+      margin-inline: auto;
+    }
+  }
+
+  &__active a {
+    color: $color-accent;
+  }
+}

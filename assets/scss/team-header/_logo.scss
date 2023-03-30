@@ -1,0 +1,8 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.team-logo {
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 45px;
+}

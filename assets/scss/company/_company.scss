@@ -1,0 +1,27 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.company {
+  @extend %container;
+
+  &__title {
+    font-size: 42px;
+    line-height: 50px;
+    @extend %text-liner-gradient-invert;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 40px 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include lg {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include md {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+}

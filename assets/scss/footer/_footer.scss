@@ -1,0 +1,98 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.footer {
+  background-color: $color-gray-bg;
+
+  &__container {
+    padding: 30px 0 40px;
+    @extend %container;
+    border-top: 4px solid $color-gray-separator;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+    @include lg {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__locations-link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-primary;
+    font-style: normal;
+    margin-right: 21px;
+  }
+
+  &__map-link {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active;
+  }
+
+
+  &__phones-link {
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-primary-alt;
+    font-weight: 700;
+  }
+
+
+  &__email-link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-active;
+  }
+
+  &__email-link::before,
+  &__phones-link::before,
+  &__map-link::before {
+    content: "•";
+    font-size: 21px;
+    line-height: 14px;
+    color: $color-gray-text;
+    margin-right: 7px;
+  }
+
+  &__copyright-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-gray-text;
+
+    @include xs {
+      text-align: center;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    @include lg {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include xs {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.team-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  fill: #24A3FF;
+  padding-top: 20px;
+  padding-bottom: 41px;
+
+
+  &__one {
+    animation-name: slider-dot-1;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    opacity: 1;
+
+    @keyframes slider-dot-1 {
+      25% {
+        opacity: 1;
+      }
+
+      33.34% {
+        opacity: 0.2;
+      }
+
+      91.66% {
+        opacity: 0.2;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__two {
+    animation-name: slider-dot-2;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    opacity: 0.2;
+
+    @keyframes slider-dot-2 {
+
+      25% {
+        opacity: 0.2;
+      }
+
+      33.34% {
+        opacity: 1;
+      }
+
+      58.34% {
+        opacity: 1;
+      }
+
+      66.66% {
+        opacity: 0.2;
+      }
+    }
+  }
+
+  &__three {
+    animation-name: slider-dot-3;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    opacity: 0.2;
+
+    @keyframes slider-dot-3 {
+      58.34% {
+        opacity: 0.2;
+      }
+
+      66.66% {
+        opacity: 1;
+      }
+
+      91.66% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0.2;
+      }
+    }
+  }
+}

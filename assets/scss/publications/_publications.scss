@@ -1,0 +1,111 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.publications {
+  background-color: $color-gray-bg;
+  padding-top: 40px;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active;
+
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    @extend %text-liner-gradient-invert;
+    margin-bottom: 40px;
+
+
+  }
+
+  &__title a {
+    color: $color-active;
+  }
+
+  &__items {
+    column-count: 3;
+    list-style-type: none;
+    gap: 40px;
+
+    @include md {
+      column-count: 2;
+    }
+
+    @include sm {
+      column-count: 1;
+    }
+  }
+
+  &__items-container {
+    max-height: 725px;
+    overflow: hidden;
+
+    @include sm {
+      max-height: unset;
+    }
+  }
+
+  &__collapsed-container {
+    overflow: visible;
+    height: 0;
+
+    @include sm {
+      height: unset;
+    }
+  }
+
+  &__shadow {
+    height: 200px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    position: relative;
+    top: -200px;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__btn {
+    height: 200px;
+    position: relative;
+    top: -400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include sm {
+      top: unset;
+      position: static;
+      height: 130px;
+    }
+  }
+
+  &__button {
+    border-radius: 12px;
+    color: $color-white;
+    background-color: $color-active;
+    border: 1px solid $color-active;
+    width: 250px;
+    padding: 16px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__sm-hidden {
+    @include sm {
+      display: none;
+    }
+  }
+}

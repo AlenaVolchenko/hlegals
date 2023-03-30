@@ -1,0 +1,70 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.examples {
+  margin-bottom: 30px;
+
+  &__container {
+    @extend %container;
+    overflow: hidden;
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__with-title {
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    background: $color-gray-bg;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    padding: 20px;
+    color: $color-accent;
+  }
+
+  &__row {
+    display: flex;
+    gap: 1px;
+
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+  &__expand {
+    flex: 1;
+  }
+
+  &__fixed-width {
+    width: 454px;
+
+    @include xl {
+      flex: 1;
+    }
+
+    @include md {
+      width: unset;
+    }
+  }
+
+  &__expand-s {
+    flex: 10;
+
+    @include xl {
+      flex: 1;
+    }
+  }
+
+  &__expand-l {
+    flex: 17;
+
+    @include xl {
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.publications-item {
+  margin: 40px 0;
+  background-color: $color-white;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    padding-bottom: 10px;
+  }
+
+
+  &__title a {
+    color: $color-active;
+  }
+
+  &__date {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-gray-text;
+    padding-bottom: 20px;
+
+    @include sm {
+      padding-bottom: 0;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    border-top: 4px solid $color-gray-separator;
+    padding-top: 20px;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__img img {
+    width: 100%;
+    line-height: 0;
+  }
+
+  &__content {
+    padding: 20px;
+  }
+}
+
+
+.publications-item:first-of-type {
+  margin-top: 0;
+}
+
+.publications-item:nth-of-type(3) {
+  @include sm {
+    margin-bottom: 0;
+  }
+}

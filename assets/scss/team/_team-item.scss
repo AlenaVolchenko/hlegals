@@ -1,0 +1,135 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.team-item {
+  display: flex;
+  gap: 40px;
+  width: calc(100% / 3);
+  flex-shrink: 0;
+
+  @include ul {}
+
+  &__page-link {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active;
+    font-size: 0.875rem;
+    padding-left: 8px;
+
+  }
+
+  &__description {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+
+    margin-bottom: 20px;
+    padding-right: 40px;
+
+    line-height: $line-height;
+    @extend %text-liner-gradient-invert;
+
+    @include lg-min {
+      margin-bottom: 68px;
+      font-size: 42px;
+    }
+
+    @include lg {
+      margin-bottom: 48px;
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 15px;
+    }
+
+    @include md {
+      font-size: 26px;
+      line-height: 32px;
+      margin-bottom: 10px;
+    }
+
+    @include sm {
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    @include xx {
+      margin-bottom: 15px;
+    }
+
+  }
+
+  &__text-autor {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: $color-gray-text;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-gray-text;
+
+    @include xx {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__picture {
+    flex: 1;
+
+    @include md {
+      display: flex;
+      align-items: center;
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__picture img {
+    @include lg {
+      height: 300px;
+    }
+
+    @include md {
+      height: 200px;
+    }
+  }
+
+  &__items {
+    padding-top: 40px;
+
+    @include lg {
+      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__picture-s {
+    display: none;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    overflow: hidden;
+
+    @include sm {
+      display: flex;
+    }
+  }
+
+  &__picture-s img {
+    width: 60px;
+    margin-top: -9px;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
