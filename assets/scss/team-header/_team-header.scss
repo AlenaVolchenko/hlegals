@@ -6,7 +6,6 @@
 
 
   &__grid {
-    // position: absolute;
     z-index: 2;
     right: 0;
     left: 0;
@@ -27,10 +26,6 @@
       grid-template-areas: "actions" "menu" "logo";
     }
 
-    // @include md {
-    //   grid-template-areas: "actions menu" "logo logo";
-    // }
-
     @include md {
       top: $gap;
       gap: $gap;
@@ -42,7 +37,6 @@
     grid-area: logo;
     display: flex;
     align-items: start;
-    font-weight: 400;
     font-size: 38px;
     line-height: 45px;
 

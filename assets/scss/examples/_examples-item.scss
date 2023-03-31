@@ -8,7 +8,7 @@
   flex-direction: column;
   display: flex;
   justify-content: end;
-  gap: 20px;
+  gap: $gap;
 
   @include md {
     min-height: unset;

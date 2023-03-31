@@ -72,16 +72,27 @@
     }
   }
 
+  li :hover {
+    color: $color-accent;
+    border-bottom: 2px solid $color-accent;
+  }
+
+  a {
+    border-bottom: 2px solid transparent;
+  }
+
   &__list {
     font-size: 18px;
 
     @include unlist;
+
     @include md-min {
       display: flex;
       justify-content: flex-end;
 
       gap: $gap-md;
     }
+
     @include md {
       position: absolute;
       top: 100%;
@@ -107,6 +118,7 @@
     @include md-min {
       padding: 0.25em 0;
     }
+
     @include md {
       padding: 0.5em 1em;
     }

@@ -15,22 +15,12 @@
 
 .team-menu a {
   color: $color-active;
+  font-weight: 500;
 }
 
 .menu {
-  &__active {
-    border-bottom: 2px solid $color-accent;
-    overflow: visible;
-    width: 66px;
-    display: flex;
-    justify-content: center;
-
-    @include md {
-      margin-inline: auto;
-    }
-  }
-
   &__active a {
     color: $color-accent;
+    border-bottom: 2px solid $color-accent;
   }
 }

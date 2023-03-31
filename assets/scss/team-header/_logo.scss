@@ -2,7 +2,37 @@
 @use "../mixins" as *;
 
 .team-logo {
-  font-weight: 400;
   font-size: 38px;
   line-height: 45px;
+
+  &__title {
+    @include lg {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    @include md {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    @include sm {
+      font-size: 19px;
+      line-height: 22px;
+    }
+  }
+
+  &__image {
+    @include lg {
+      height: 50px;
+    }
+
+    @include md {
+      height: 40px;
+    }
+
+    @include sm {
+      height: 35px;
+    }
+  }
 }

@@ -3,37 +3,84 @@
 
 .company-item {
   display: grid;
-  gap: 20px;
-  grid-template-areas: "icn" "ttl" "dsc" "ptc";
+  grid-template-areas: "ptc" "ttl" "dsc" "icn";
+  font-size: $font-size;
+  line-height: 22px;
+  color: $color-gray-text;
+
+
+  @include md {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: $gap;
+    justify-items: start;
+  }
+
+  @include sm {
+    justify-content: flex-end
+  }
 
   &__title {
     grid-area: ttl;
-    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     margin-bottom: 5px;
+    color: $color-primary;
+    padding-right: 14px;
   }
 
   &__description {
     grid-area: dsc;
   }
 
-  &___picture {
-    grid-area: ptc;
-    margin-bottom: 5px;
-  }
-
-  &__icon {
+  &___icon {
     grid-area: icn;
+    margin-bottom: 5px;
+
+    @include md {
+      padding-top: 10px;
+    }
   }
 
-  &__icon img {
+  &__picture {
+    grid-area: ptc;
+
+    @include md {
+      width: 60%;
+    }
+  }
+
+  &__picture img {
     width: 100%;
+    margin-bottom: 10px;
+
+    @include md {
+      width: 50vw;
+    }
+
+    @include sm {
+      width: 35vw;
+    }
   }
 
   &__subscription {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include md {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  &__text {
+    @include md {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+    }
   }
 }

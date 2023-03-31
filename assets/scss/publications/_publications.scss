@@ -20,13 +20,12 @@
   }
 
   &__title {
+    @extend %text-liner-gradient-invert;
     font-weight: 700;
     font-size: 42px;
     line-height: 50px;
-    @extend %text-liner-gradient-invert;
     margin-bottom: 40px;
-
-
+    width: max-content;
   }
 
   &__title a {
@@ -36,7 +35,7 @@
   &__items {
     column-count: 3;
     list-style-type: none;
-    gap: 40px;
+    gap: $gap-xl;
 
     @include md {
       column-count: 2;
@@ -67,7 +66,7 @@
 
   &__shadow {
     height: 200px;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 86.5%);
     position: relative;
     top: -200px;
 
@@ -77,9 +76,9 @@
   }
 
   &__btn {
-    height: 200px;
+    height: 130px;
     position: relative;
-    top: -400px;
+    top: -330px;
     display: flex;
     justify-content: center;
     align-items: center;

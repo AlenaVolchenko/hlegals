@@ -94,7 +94,7 @@
 
         background-image: url(../img/Frame2.svg);
         background-repeat: no-repeat;
-        background-position: 50% 100%;
+        background-position: 50% 70%;
 
         @include abs-position;
       }
@@ -113,7 +113,7 @@
     &-title {
       position: absolute;
       z-index: 1;
-      top: 50%;
+      top: 46.7%;
       left: 50%;
 
       width: min(100% - $gap-xl, 620px);

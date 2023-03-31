@@ -212,28 +212,24 @@ template {
 }
 
 .slider__header.-active {
+  color: transparent;
   background: -webkit-gradient(linear, left top, right top, color-stop(1%, #ef8080), to(#f0145a));
   background: -o-linear-gradient(left, #ef8080 1%, #f0145a 100%);
   background:    linear-gradient(90deg, #ef8080 1%, #f0145a 100%);
   -webkit-background-clip: text;
           background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-          text-fill-color: transparent;
 }
 
 .company__title,
 .publications__title,
 .team-item__description,
 .services__title {
+  color: transparent;
   background: -webkit-gradient(linear, left top, right top, color-stop(1%, #f0145a), to(#ef8080));
   background: -o-linear-gradient(left, #f0145a 1%, #ef8080 100%);
   background:    linear-gradient(90deg, #f0145a 1%, #ef8080 100%);
   -webkit-background-clip: text;
           background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-          text-fill-color: transparent;
 }
 
 *,
@@ -307,14 +303,14 @@ a {
 
   content: "";
 
-  background: -webkit-gradient(linear, left bottom, left top, from(#323264), to(transparent));
-  background: -o-linear-gradient(bottom, #323264 0%, transparent 100%);
-  background:    linear-gradient(to top, #323264 0%, transparent 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(16.67%, rgba(50, 50, 100, 0)), to(#323264));
+  background: -o-linear-gradient(top, rgba(50, 50, 100, 0) 16.67%, #323264 100%);
+  background:    linear-gradient(180deg, rgba(50, 50, 100, 0) 16.67%, #323264 100%);
 }
 .page-header__content-title {
   position: absolute;
   z-index: 1;
-  top: 50%;
+  top: 46.7%;
   left: 50%;
 
   width: min(100% - 40px, 620px);
@@ -416,6 +412,13 @@ a {
   left: 50%;
 
   width: 0;
+}
+.menu li :hover {
+  color: #f0145a;
+  border-bottom: 2px solid #f0145a;
+}
+.menu a {
+  border-bottom: 2px solid transparent;
 }
 .menu__list {
   margin: 0;
@@ -732,6 +735,24 @@ a {
 .team__viewport {
   overflow: hidden;
 }
+.team__visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+}
 
 .team-item {
   display: -webkit-box;
@@ -767,14 +788,12 @@ a {
   color: #b3b3ba;
 
   font-size: 18px;
-  font-weight: 400;
   line-height: 21px;
 }
 .team-item__text {
   color: #b3b3ba;
 
   font-size: 16px;
-  font-weight: 400;
   line-height: 22px;
 }
 .team-item__picture {
@@ -1137,6 +1156,9 @@ a {
   line-height: 17px;
 }
 .publications__title {
+  width: -webkit-max-content;
+  width:    -moz-max-content;
+  width:         max-content;
   margin-bottom: 40px;
 
   font-size: 42px;
@@ -1170,13 +1192,13 @@ a {
 
   height: 200px;
 
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgb(255, 255, 255)));
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgb(255, 255, 255));
-  background-image:    linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(86.5%, rgb(255, 255, 255)));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 86.5%);
+  background-image:    linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 86.5%);
 }
 .publications__btn {
   position: relative;
-  top: -400px;
+  top: -330px;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1188,7 +1210,7 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
 
-  height: 200px;
+  height: 130px;
 }
 .publications__button {
   width: 250px;
@@ -1216,7 +1238,6 @@ a {
   padding-bottom: 10px;
 
   font-size: 18px;
-  font-weight: 400;
   line-height: 21px;
 }
 .publications-item__title a {
@@ -1236,11 +1257,11 @@ a {
 }
 .publications-item__text {
   padding-top: 20px;
+  padding-right: 5px;
 
   border-top: 4px solid #e6e6f0;
 
   font-size: 16px;
-  font-weight: 400;
   line-height: 22px;
 }
 .publications-item__img img {
@@ -1272,6 +1293,12 @@ a {
   border-top: 4px solid #e6e6f0;
 
   gap: 20px;
+}
+.footer__container-botton {
+  border-top: 1px solid #ffffff;
+}
+.footer__radius {
+  border-radius: 15px;
 }
 .footer__locations-link {
   margin-right: 21px;
@@ -1370,7 +1397,6 @@ a {
   -ms-flex-align: start;
 
   font-size: 38px;
-  font-weight: 400;
   line-height: 45px;
 
   grid-area: logo;
@@ -1402,28 +1428,17 @@ a {
 
 .team-menu a {
   color: #24a3ff;
+
+  font-weight: 500;
 }
 
-.menu__active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: visible;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-
-  width: 66px;
-
-  border-bottom: 2px solid #f0145a;
-}
 .menu__active a {
   color: #f0145a;
+  border-bottom: 2px solid #f0145a;
 }
 
 .team-logo {
   font-size: 38px;
-  font-weight: 400;
   line-height: 45px;
 }
 
@@ -1473,8 +1488,13 @@ a {
 }
 
 .company__title {
+  max-width: 864px;
+  margin: 80px 0 80px;
+
   font-size: 42px;
   line-height: 50px;
+
+  margin-inline: auto;
 }
 .company__grid {
   display: grid;
@@ -1482,18 +1502,27 @@ a {
   gap: 40px 40px;
   grid-template-columns: 1fr 1fr 1fr;
 }
+.company__container {
+  margin-bottom: 60px;
+}
 
 .company-item {
   display: grid;
 
-  gap: 20px;
-  grid-template-areas: "icn" "ttl" "dsc" "ptc";
+  color: #b3b3ba;
+
+  font-size: 16px;
+  line-height: 22px;
+
+  grid-template-areas: "ptc" "ttl" "dsc" "icn";
 }
 .company-item__title {
   margin-bottom: 5px;
+  padding-right: 14px;
+
+  color: #323264;
 
   font-size: 18px;
-  font-weight: 400;
   line-height: 21px;
 
   grid-area: ttl;
@@ -1501,16 +1530,17 @@ a {
 .company-item__description {
   grid-area: dsc;
 }
-.company-item___picture {
+.company-item___icon {
   margin-bottom: 5px;
 
-  grid-area: ptc;
-}
-.company-item__icon {
   grid-area: icn;
 }
-.company-item__icon img {
+.company-item__picture {
+  grid-area: ptc;
+}
+.company-item__picture img {
   width: 100%;
+  margin-bottom: 10px;
 }
 .company-item__subscription {
   display: -webkit-box;
@@ -1567,7 +1597,7 @@ a {
 
     background-image: url(../img/Frame2.svg);
     background-repeat: no-repeat;
-    background-position: 50% 100%;
+    background-position: 50% 70%;
   }
   .menu__btn {
     display: none;
@@ -1653,8 +1683,6 @@ a {
     font-size: 42px;
   }
   .team-item__description {
-    margin-bottom: 68px;
-
     font-size: 42px;
   }
   .team-header__grid {
@@ -1725,6 +1753,10 @@ a {
     -ms-flex: 1;
         flex: 1;
   }
+  .company__title {
+    font-size: 40px;
+    line-height: 46px;
+  }
 }
 @media (max-width: 1199.8px) and (min-width: 768px) {
   .services__grid {
@@ -1740,8 +1772,10 @@ a {
 
     font-size: 32px;
   }
+  .team-item {
+    gap: 30px;
+  }
   .team-item__description {
-    margin-bottom: 48px;
     margin-bottom: 15px;
 
     font-size: 32px;
@@ -1762,7 +1796,7 @@ a {
     -ms-flex-pack: center;
     justify-content: center;
 
-    padding-top: 0;
+    padding: 20px 20px 20px 0;
   }
   .examples-item__title {
     font-size: 20px;
@@ -1810,10 +1844,21 @@ a {
     -ms-flex-pack: center;
     justify-content: center;
   }
+  .team-logo__title {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .team-logo__image {
+    height: 50px;
+  }
   .team-actions {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+  .company__title {
+    font-size: 38px;
+    line-height: 44px;
   }
   .company__grid {
     grid-template-columns: 1fr 1fr;
@@ -1893,6 +1938,9 @@ a {
 
     font-size: 22px;
   }
+  .team-item {
+    gap: 20px;
+  }
   .team-item__description {
     margin-bottom: 10px;
 
@@ -1949,14 +1997,69 @@ a {
     -ms-flex-pack: unset;
     justify-content: unset;
   }
-  .menu__active {
-    margin-inline: auto;
+  .team-logo__title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .team-logo__image {
+    height: 40px;
   }
   .team-actions__locations {
     display: none;
   }
+  .company__title {
+    margin: 20px 0;
+
+    font-size: 36px;
+    line-height: 42px;
+  }
   .company__grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+  .company-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+
+    gap: 20px;
+    justify-items: start;
+  }
+  .company-item___icon {
+    padding-top: 10px;
+  }
+  .company-item__picture {
+    width: 60%;
+  }
+  .company-item__picture img {
+    width: 50vw;
+  }
+  .company-item__subscription {
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .company-item__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 @media (max-width: 575.8px) {
@@ -1998,6 +2101,9 @@ a {
   .team-item__picture {
     display: none;
   }
+  .team-item__items {
+    padding: 20px;
+  }
   .team-item__picture-s {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2035,6 +2141,13 @@ a {
   .publications-item:nth-of-type(3) {
     margin-bottom: 0;
   }
+  .team-logo__title {
+    font-size: 19px;
+    line-height: 22px;
+  }
+  .team-logo__image {
+    height: 35px;
+  }
   .team-actions {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -2045,6 +2158,18 @@ a {
   }
   .team-actions__socials {
     display: none;
+  }
+  .company__title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .company-item {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  .company-item__picture img {
+    width: 35vw;
   }
 }
 @media (max-width: 479.8px) {
@@ -2066,6 +2191,10 @@ a {
     -ms-flex-pack: center;
     justify-content: center;
   }
+  .company__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 @media (max-width: 419.8px) {
   .team-item__description {
@@ -2077,5 +2206,9 @@ a {
   .examples-item__title {
     font-size: 18px;
     line-height: 21px;
+  }
+  .company__title {
+    font-size: 30px;
+    line-height: 34px;
   }
 }

@@ -51,7 +51,6 @@
     text-transform: uppercase;
 
     color: rgba($color-white, 0.5);
-
     font-size: 0.875rem;
 
     &::after {
@@ -70,20 +69,16 @@
   &__title {
     width: max-content;
     max-width: 100%;
-
     line-height: $line-height;
-
     @extend %text-liner-gradient-invert;
 
     @include lg-min {
       margin-bottom: 68px;
-
       font-size: 42px;
     }
 
     @include lg {
       margin-bottom: 48px;
-
       font-size: 32px;
     }
   }
@@ -94,8 +89,7 @@
 
   &__grid {
     display: grid;
-
-    gap: 60px 40px;
+    gap: 60px $gap-xl;
 
     @include xl-min {
       grid-template-columns: repeat(3, 1fr);

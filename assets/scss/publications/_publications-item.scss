@@ -8,7 +8,6 @@
   overflow: hidden;
 
   &__title {
-    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     padding-bottom: 10px;
@@ -34,11 +33,11 @@
   }
 
   &__text {
-    font-weight: 400;
-    font-size: 16px;
+    font-size: $font-size;
     line-height: 22px;
     border-top: 4px solid $color-gray-separator;
     padding-top: 20px;
+    padding-right: 5px;
 
     @include sm {
       display: none;

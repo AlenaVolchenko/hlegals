@@ -9,7 +9,7 @@
     @extend %container;
     border-top: 4px solid $color-gray-separator;
     display: flex;
-    gap: 20px;
+    gap: $gap;
     justify-content: space-between;
 
     @include lg {
@@ -18,9 +18,17 @@
     }
   }
 
+  &__container-botton {
+    border-top: 1px solid $color-white;
+  }
+
+  &__radius {
+    border-radius: 15px;
+  }
+
   &__locations-link {
     font-weight: 700;
-    font-size: 16px;
+    font-size: $font-size;
     line-height: 19px;
     color: $color-primary;
     font-style: normal;
@@ -38,7 +46,7 @@
 
 
   &__phones-link {
-    font-size: 16px;
+    font-size: $font-size;
     line-height: 19px;
     color: $color-primary-alt;
     font-weight: 700;
