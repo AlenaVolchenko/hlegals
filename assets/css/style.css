@@ -2032,9 +2032,6 @@ a {
   .company-item___icon {
     padding-top: 10px;
   }
-  .company-item__picture {
-    width: 60%;
-  }
   .company-item__picture img {
     width: 50vw;
   }
@@ -2054,12 +2051,10 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -ms-flex-direction: column;
+        flex-direction: column;
   }
 }
 @media (max-width: 575.8px) {

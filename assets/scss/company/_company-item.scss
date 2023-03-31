@@ -45,9 +45,9 @@
   &__picture {
     grid-area: ptc;
 
-    @include md {
-      width: 60%;
-    }
+    // @include md {
+    //   width: 60%;
+    // }
   }
 
   &__picture img {
@@ -78,9 +78,7 @@
   &__text {
     @include md {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-
+      flex-direction: column;
     }
   }
 }
